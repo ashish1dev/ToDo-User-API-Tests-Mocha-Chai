@@ -34,13 +34,13 @@ const todos = [{
   _creator: userTwoID
 }];
 
-var populateTodos = (done) => {
+var addDummyTodoItems = (done) => {
   Todo.remove({}).then(() => {
     return Todo.insertMany(todos);
   }).then(() => done());
 };
 
-var populateUsers = (done) => {
+var addDummyUsers = (done) => {
   User.remove({}).then(() => {
     var userOne = new User(users[0]).save();
     var userTwo = new User(users[1]).save();
@@ -51,7 +51,7 @@ var populateUsers = (done) => {
 
 module.exports = {
   todos,
-  populateTodos,
+  addDummyTodoItems,
   users,
-  populateUsers
+  addDummyUsers
 }
