@@ -8,16 +8,16 @@ const userOneID = new ObjectID();
 const userTwoID = new ObjectID();
 const users = [{
   _id: userOneID,
-  email: "userone@gmail.com",
-  password: "useronepassword",
+  email: "person1@gmail.com",
+  password: "person1PASSWORD",
   tokens: [{
     access: 'auth',
     token: jwt.sign({_id: userOneID, access: 'auth'}, process.env.JWT_SECRET).toString()
   }]
 }, {
   _id: userTwoID,
-  email: "usertwo@gmail.com",
-  password: "usertwopassword",
+  email: "person2@gmail.com",
+  password: "person2PASSWORD",
   tokens: [{
     access: 'auth',
     token: jwt.sign({_id: userTwoID, access: 'auth'}, process.env.JWT_SECRET).toString()
