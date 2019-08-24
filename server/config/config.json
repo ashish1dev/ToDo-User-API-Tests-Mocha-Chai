@@ -1,11 +1,12 @@
 {
   "development":{
     "MONGODB_URI": "mongodb://localhost/testDB",
-    "PORT": "8000"
+    "PORT": "3300",
+    "JWT_SECRET" : "random_secret_key"
   },
   "test":{
     "MONGODB_URI": "mongodb://localhost/testDB",
-    "PORT": "8000",
+    "PORT": "4000",
     "JWT_SECRET" : "random_secret_key"
   }
 }
