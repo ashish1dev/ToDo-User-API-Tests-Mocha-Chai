@@ -35,13 +35,13 @@ const todos = [{
 }];
 
 var addDummyTodoItems = (done) => {
-  Todo.remove({}).then(() => {
+  Todo.deleteMany({}).then(() => {
     return Todo.insertMany(todos);
   }).then(() => done());
 };
 
 var addDummyUsers = (done) => {
-  User.remove({}).then(() => {
+  User.deleteMany({}).then(() => {
     var userOne = new User(users[0]).save();
     var userTwo = new User(users[1]).save();
 
