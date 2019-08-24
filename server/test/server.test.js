@@ -277,8 +277,8 @@ describe('POST /users', () => {
     request(app)
       .post('/users')
       .send({
-        email: "asdvsdf",
-        password: "sd3"
+        email: "someRandomText",
+        password: "011001RandomPswd"
       })
       .expect(400)
       .end(done);
